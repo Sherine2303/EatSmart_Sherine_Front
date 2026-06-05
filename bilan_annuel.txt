@@ -1,0 +1,3 @@
+Chiffre d'affaire annuel du restaurant :106.7 SELECT SUM(prix_total) FROM commande
+Nombre de commandes traitées dans l'année: 7  SELECT COUNT(*) FROM commande
+Plats le plus vendus: Margarita

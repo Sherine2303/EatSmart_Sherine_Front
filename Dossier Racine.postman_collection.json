@@ -1,0 +1,782 @@
+{
+	"info": {
+		"_postman_id": "5dd13834-ac10-46ac-81fe-2422175bf3cb",
+		"name": "Dossier Racine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48519192",
+		"_collection_link": "https://sherine05-6984030.postman.co/workspace/eatsmart-sherine~ce2d7d33-31ec-4e2e-9dac-c0da74498273/collection/48519192-5dd13834-ac10-46ac-81fe-2422175bf3cb?action=share&source=collection_link&creator=48519192"
+	},
+	"item": [
+		{
+			"name": "Articles",
+			"item": [
+				{
+					"name": "getAllArticles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getArticlesById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/articles/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"articles",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCommandesByArticleID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories/3/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"categories",
+								"3",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createArticle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_article\": 64,\r\n    \"nom\": \"Frommage 23cm\",\r\n    \"prix\": \"7.9000\",\r\n    \"description\": \"sauce tomate premium, origan, viande\",\r\n    \"id_categorie\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"articles"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createArticle",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_article\": 64,\r\n    \"nom\": \"Frommage 23cm\",\r\n    \"prix\": \"7.9000\",\r\n    \"description\": \"sauce tomate premium, origan, viande\",\r\n    \"id_categorie\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/articles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"EatSmart-Sherine",
+										"sherine-api-eatsmart",
+										"articles"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Oct 2025 19:11:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Content-Length",
+									"value": "125"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_article\": 64,\n    \"nom\": \"Frommage 23cm\",\n    \"prix\": \"7.9000\",\n    \"description\": \"sauce tomate premium, origan, viande\",\n    \"id_categorie\": 2\n}"
+						}
+					]
+				},
+				{
+					"name": "updateArticle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_article\": 64,\r\n    \"nom\": \"tomate 23cm\",\r\n    \"prix\": \"23.03\",\r\n    \"description\": \"sauce tomate premium, jambon\",\r\n    \"id_categorie\": 3\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/articles/64",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"articles",
+								"64"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateArticle",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_article\": 64,\r\n    \"nom\": \"tomate 23cm\",\r\n    \"prix\": \"23.03\",\r\n    \"description\": \"sauce tomate premium, jambon\",\r\n    \"id_categorie\": 3\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/articles/64",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"EatSmart-Sherine",
+										"sherine-api-eatsmart",
+										"articles",
+										"64"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Oct 2025 19:11:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "deleteArticle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_article\": 64,\r\n    \"nom\": \"Frommage 23cm\",\r\n    \"prix\": \"7.9000\",\r\n    \"description\": \"sauce tomate premium, origan, viande\",\r\n    \"id_categorie\": 2\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/articles/64",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"articles",
+								"64"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteArticle",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_article\": 64,\r\n    \"nom\": \"Frommage 23cm\",\r\n    \"prix\": \"7.9000\",\r\n    \"description\": \"sauce tomate premium, origan, viande\",\r\n    \"id_categorie\": 2\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/articles/64",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"EatSmart-Sherine",
+										"sherine-api-eatsmart",
+										"articles",
+										"64"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Oct 2025 19:12:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "getAllCatégories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCatégoriesById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"categories",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getArticlesByCategorieID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories/3/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"categories",
+								"3",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCategorie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_categorie\": 7,\r\n    \"nom\": \"grace\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"categories"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createCategorie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_categorie\": 7,\r\n    \"nom\": \"grace\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"EatSmart-Sherine",
+										"sherine-api-eatsmart",
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Oct 2025 19:13:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_categorie\": 7,\n    \"nom\": \"grace\"\n}"
+						}
+					]
+				},
+				{
+					"name": "updateCategorie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_categorie\": 7,\r\n    \"nom\": \"glace\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"categories",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateCategorie",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_categorie\": 7,\r\n    \"nom\": \"glace\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"EatSmart-Sherine",
+										"sherine-api-eatsmart",
+										"categories",
+										"7"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Oct 2025 19:14:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "deleteCategorie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_categorie\": 7,\r\n    \"nom\": \"glace\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"categories",
+								"7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteCategorie",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_categorie\": 7,\r\n    \"nom\": \"glace\"\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/categories/7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"EatSmart-Sherine",
+										"sherine-api-eatsmart",
+										"categories",
+										"7"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Oct 2025 19:14:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Commandes",
+			"item": [
+				{
+					"name": "getAllCommandes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/commandes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"commandes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCommandesById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/commandes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"commandes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getArticlesByCommandeID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/commandes/2/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"commandes",
+								"2",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCommandeAndAssociation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id_commande\": 23,\r\n  \"date_commande\": \"2024-10-25 00:00:00\",\r\n  \"prix_total\": 10,\r\n  \"etat\": \"en cours\",\r\n  \"articles\": [\r\n    {\r\n      \"id_article\": 1,\r\n      \"quantite\": 10\r\n    },\r\n    {\r\n      \"id_article\": 2,\r\n      \"quantite\": 5\r\n    },\r\n    {\r\n      \"id_article\": 3,\r\n      \"quantite\": 2\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/commandes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"EatSmart-Sherine",
+								"sherine-api-eatsmart",
+								"commandes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "createCommandeAndAssociation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id_commande\": 23,\r\n  \"date_commande\": \"2024-10-25 00:00:00\",\r\n  \"prix_total\": 10,\r\n  \"etat\": \"en cours\",\r\n  \"articles\": [\r\n    {\r\n      \"id_article\": 1,\r\n      \"quantite\": 10\r\n    },\r\n    {\r\n      \"id_article\": 2,\r\n      \"quantite\": 5\r\n    },\r\n    {\r\n      \"id_article\": 3,\r\n      \"quantite\": 2\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "http://localhost/EatSmart-Sherine/sherine-api-eatsmart/commandes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"EatSmart-Sherine",
+										"sherine-api-eatsmart",
+										"commandes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Oct 2025 19:15:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Win64) PHP/8.3.14 mod_fcgid/2.3.10-dev"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/html; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id_commande\": 23,\n    \"date_commande\": \"2024-10-25 00:00:00\",\n    \"prix_total\": 10,\n    \"etat\": \"en cours\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
